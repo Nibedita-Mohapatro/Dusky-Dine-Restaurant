@@ -1,0 +1,278 @@
+html, body {
+    margin: 0; /* Remove default margin from body */
+    padding: 0; /* Remove default padding from body */
+    width: 100%; /* Ensure full width */
+    height: 100%; /* Ensure full height */
+}
+
+.title-section {
+    color: goldenrod;
+    background-color: black;
+    height: 50px;
+    font-family: 'whisper';
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for text and image */
+.upcontainer  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 50px 80px;
+}
+
+/* Styling for text section */
+.text-container h3{
+    width: 100%; /* Ensure text takes 50% of space */
+    color: rgb(190, 140, 24);
+    font-size:30px;
+    font-weight: 600;
+    font-family:Times New Roman;
+}
+.text-container p{
+    width: 100%; /* Ensure text takes 50% of space */
+    color: #F5F5DC;
+    font-size:23px;
+    font-weight: 200;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* Styling for image */
+.image1 {
+    width: 45%; /* Ensure image takes 45% of space */
+    max-width: 500px;
+    height: auto;
+    border: 2px solid antiquewhite ;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    height: 650px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    background-repeat: no-repeat;
+    background-size: 75%;
+    opacity: 70%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(22, 21, 21, 0.5);
+    padding: 20px;
+    filter: invert(0.8);
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(5, 5, 5);
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    font-weight:10px;
+    color: #0b0b0b;
+    transform: translate(-50%, -50%);
+}
+/* About Us Animation (Slide Up) */
+#about {
+    opacity: 1;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#about.visible-slide-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact Us Animation (Slide Right) */
+#contact {
+    opacity: 1;
+    transform: translateX(-30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#contact.visible-slide-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* About & Contact Card Styles */
+.about-card, .contact-card {
+    background: #111;
+    color: goldenrod;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%; /* Increase width to take more space */
+    min-width: 500px; /* Ensures it doesn’t get too small */
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(26, 25, 24, 0.5);
+    border: 2px solid #F7E7CE;
+    max-width: 600px;
+}
+
+/* Heading Styles */
+.about-card h2, .contact-card h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: rgb(190, 140, 24);
+}
+
+/* Paragraph Styles */
+.about-card p, .contact-card p {
+    font-size: 18px;
+    color: #F5F5DC;
+}
+.reviews-section {
+    background: rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 35px;
+    color: rgb(190, 140, 24);
+    margin-bottom: 10px;
+}
+.review-header h3{
+    color: rgb(190, 140, 24);
+}
+.review-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 30px;
+}
+.review {
+    background-image: url('revimg.png');
+    background-position: center;
+    border: 2px solid rgb(223, 224, 213); 
+    border-radius: 5px; 
+    padding: 10px;
+    box-shadow: 0 0 3px #ffd7004d;
+    text-align: left;
+    width: 100%;
+    max-width: 300px; /* Adjust this value if needed */
+    font-size: 14px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-right: 20px;
+}
+.review p{
+    font-size: 18px;
+    color: #F5F5DC;
+}
+
+.review img {
+    width: 100%;
+    border-radius: 5px;
+    border-color: antiquewhite;
+    height: 150px; 
+    object-fit: cover;
+}
+
+.rating {
+    color:goldenrod;
+    margin-top: 3px;
+    font-size: 12px; /* Smaller rating text */
+}
+
+.review-tags {
+    font-size: 12px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .review {
+        max-width: 90%;
+    }
+}
+
+footer {
+    background: #1A1A1A;
+    color: rgb(190, 140, 24);
+    padding: 40px 0;
+    text-align: center;
+    height:200px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+
+.footer-section .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-section .social a {
+    font-size: 24px; /* Fixed missing font size */
+    color: rgb(218, 217, 207);
+    transition: 0.3s;
+}
+
+.footer-section .social a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    background: #1A1A1A;
+    padding: 10px 0;
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid gold;
+    color:antiquewhite;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .about-card, .contact-card {
+        width: 90%; 
+    }
+}
+/* Add these styles for the scrollbar */
+.review-container::-webkit-scrollbar {
+    height: 10px; 
+}
+
+.review-container::-webkit-scrollbar-thumb {
+    background: goldenrod; 
+    border-radius: 5px;
+}
+.review-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+    border-radius: 5px; /* Rounded corners for the track */
+}

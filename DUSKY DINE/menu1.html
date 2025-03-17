@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" >
+    <style>
+        body {
+            background-color: black;
+            color: rgb(190, 140, 24);
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: rgb(190, 140, 24);
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 2px solid rgb(84, 76, 22);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: rgb(196, 168, 103);
+            text-transform: uppercase;
+            margin-top: 30px;
+            border-bottom: 1px solid rgb(84, 76, 22);
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: rgb(196, 168, 103);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: rgb(239, 236, 233);
+            margin: 5px 0;
+            transition: color 0.3s ease-in-out;
+        }
+
+        p:hover {
+            color: rgb(190, 140, 24);
+            font-weight: bold;
+        }
+
+        .menu-section {
+            width: 100%;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: 1fr 0.3fr 1fr 0.3fr;
+            gap: 20px;
+            text-align: left;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .column {
+            padding: 10px;
+        }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #4d4a4a;
+            padding: 10px 15px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .home-button a {
+            color: #c18e18;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-button">
+        <a href="resh.html">
+            <i class="fa fa-home"></i>
+        </a>
+    </div>
+    <div class="menu-container">
+        <h1 class="menu-title">Our Menu</h1>
+        
+        <div class="menu-section">
+            <h2>Italian</h2>
+            <div class="menu-items">
+                <div class="column"><h3>Starters</h3>
+                    <p>Bruschetta</p>
+                    <p>Garlic Bread</p>
+                    <p>Caprese Salad</p>
+                    <p>Stuffed Mushrooms</p>
+                    <p>Focaccia Bread</p>
+                    <p>Arancini</p>
+                    <p>Fried Calamari</p>
+                    <p>Pesto Crostini</p>
+                    <p>Tomato Soup</p>
+                    <p>Cheese Platter</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$5</p>
+                    <p>$4</p>
+                    <p>$6</p>
+                    <p>$7</p>
+                    <p>$5</p>
+                    <p>$8</p>
+                    <p>$9</p>
+                    <p>$6</p>
+                    <p>$5</p>
+                    <p>$10</p>
+                </div>
+                <div class="column"><h3>Main Course</h3>
+                    <p>Pasta Alfredo</p>
+                    <p>Margherita Pizza</p>
+                    <p>Lasagna</p>
+                    <p>Spaghetti Carbonara</p>
+                    <p>Risotto</p>
+                    <p>Chicken Parmigiana</p>
+                    <p>Eggplant Parmesan</p>
+                    <p>Gnocchi</p>
+                    <p>Seafood Pasta</p>
+                    <p>Tuscan Chicken</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$12</p>
+                    <p>$15</p>
+                    <p>$14</p>
+                    <p>$13</p>
+                    <p>$16</p>
+                    <p>$18</p>
+                    <p>$14</p>
+                    <p>$13</p>
+                    <p>$20</p>
+                    <p>$17</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>Indian</h2>
+            <div class="menu-items">
+                <div class="column"><h3>Starters</h3>
+                    <p>Paneer Tikka</p>
+                    <p>Mushroom Masala</p>
+                    <p>Mushroom 65</p>
+                    <p>Hara Bhara Kebab</p>
+                    <p>Chicken Rogn Josh </p>
+                    <p>Prawn Masala</p>
+                    <p>Kebab And Tandoor(Your choice Items)</p>
+                    <p>Chilli Paneer</p>
+                    <p>Mix Veg</p>
+                    <p>Veg Pakoras</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$6</p>
+                    <p>$3</p>
+                    <p>$4</p>
+                    <p>$5</p>
+                    <p>$4</p>
+                    <p>$5</p>
+                    <p>$3</p>
+                    <p>$7</p>
+                    <p>$5</p>
+                    <p>$6</p>
+                </div>
+                <div class="column"><h3>Main Course</h3>
+                    <p>Butter Chicken</p>
+                    <p>Dal Makhani</p>
+                    <p>Paneer Butter Masala</p>
+                    <p>Chole Bhature</p>
+                    <p>Rogan Josh</p>
+                    <p>Biryani</p>
+                    <p>Aloo Gobi</p>
+                    <p>Palak Paneer</p>
+                    <p>Malai Kofta</p>
+                    <p>Fish Curry</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$14</p>
+                    <p>$10</p>
+                    <p>$12</p>
+                    <p>$11</p>
+                    <p>$15</p>
+                    <p>$13</p>
+                    <p>$9</p>
+                    <p>$12</p>
+                    <p>$14</p>
+                    <p>$16</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Chinese</h2>
+            <div class="menu-items">
+                <div class="column"><h3>Starters</h3>
+                    <p>Spring Rolls</p>
+                    <p>Manchurian</p>
+                    <p>Wonton Soup</p>
+                    <p>Dim Sum</p>
+                    <p>Chili Paneer</p>
+                    <p>Hakka Noodles</p>
+                    <p>Hot & Sour Soup</p>
+                    <p>Chicken Lollipop</p>
+                    <p>Peking Duck</p>
+                    <p>Schezwan Tofu</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$6</p>
+                    <p>$7</p>
+                    <p>$5</p>
+                    <p>$8</p>
+                    <p>$9</p>
+                    <p>$10</p>
+                    <p>$7</p>
+                    <p>$11</p>
+                    <p>$15</p>
+                    <p>$12</p>
+                </div>
+                <div class="column"><h3>Main Course</h3>
+                    <p>Schezwan Fried Rice</p>
+                    <p>Kung Pao Chicken</p>
+                    <p>Sweet & Sour Pork</p>
+                    <p>Chow Mein</p>
+                    <p>General Tso’s Chicken</p>
+                    <p>Sesame Tofu</p>
+                    <p>Peking Duck</p>
+                    <p>Black Bean Beef</p>
+                    <p>Stir-Fry Vegetables</p>
+                    <p>Ma Po Tofu</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$10</p>
+                    <p>$12</p>
+                    <p>$14</p>
+                    <p>$11</p>
+                    <p>$13</p>
+                    <p>$9</p>
+                    <p>$18</p>
+                    <p>$15</p>
+                    <p>$10</p>
+                    <p>$12</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Drinks</h2>
+            <div class="menu-items">
+                <div class="column"><h3>Soft Drinks</h3>
+                    <p>Coke</p>
+                    <p>Sprite</p>
+                    <p>Pepsi</p>
+                    <p>Fanta</p>
+                    <p>Mountain Dew</p>
+                    <p>Lemonade</p>
+                    <p>Iced Tea</p>
+                    <p>Fruit Punch</p>
+                    <p>Cold Coffee</p>
+                    <p>Mango Shake</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$2</p>
+                    <p>$2</p>
+                    <p>$2</p>
+                    <p>$3</p>
+                    <p>$3</p>
+                    <p>$4</p>
+                    <p>$4</p>
+                    <p>$5</p>
+                    <p>$5</p>
+                    <p>$6</p>
+                </div>
+                <div class="column"><h3>Hard Drinks</h3>
+                    <p>Whiskey</p>
+                    <p>Rum</p>
+                    <p>Vodka</p>
+                    <p>Tequila</p>
+                    <p>Gin</p>
+                    <p>Brandy</p>
+                    <p>Scotch</p>
+                    <p>Beer</p>
+                    <p>Wine</p>
+                    <p>Cocktails</p>
+                </div>
+                <div class="column"><h3>Price</h3>
+                    <p>$8</p>
+                    <p>$7</p>
+                    <p>$9</p>
+                    <p>$10</p>
+                    <p>$8</p>
+                    <p>$9</p>
+                    <p>$12</p>
+                    <p>$6</p>
+                    <p>$10</p>
+                    <p>$12</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

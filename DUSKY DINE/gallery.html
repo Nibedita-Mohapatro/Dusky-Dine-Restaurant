@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('resimage6.png');
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color:  rgb(190, 140, 24);;
+            font-size: 2.5em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .overlay h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #4d4a4a;
+            padding: 10px 15px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .home-button a {
+            color: #c18e18;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home-button">
+        <a href="resh.html">
+            <i class="fa fa-home"></i>
+        </a>
+    </div>
+    <h1>Golden Hues</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="pic1.png" alt="Gallery Image 1">
+            <div class="overlay">
+                <h3>Elegant Dining</h3>
+                <p>Experience luxury dining at its finest</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic4.png" alt="Gallery Image 3">
+            <div class="overlay">
+                <h3>Customized Party</h3>
+                <p>Contemporary design meets comfort</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic10.png" alt="Gallery Image 4">
+            <div class="overlay">
+                <h3>Cozy Bar Corner</h3>
+                <p>Relax and sip your favorite drinks</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic6.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Royal Dining</h3>
+                <p>Indulge in an opulent dining experience</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic17.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Celebration Hub</h3>
+                <p>Perfect space for joyful gatherings and parties</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic25.png" alt="Gallery Image 1">
+            <div class="overlay">
+                <h3>Executive Lounge</h3>
+                <p>A fine blend of elegance and flavors</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic5.png" alt="Gallery Image 3">
+            <div class="overlay">
+                <h3>Meeting Area</h3>
+                <p>A stylish and professional space for productive discussions</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic20.png" alt="Gallery Image 3">
+            <div class="overlay">
+                <h3>Modern Interior</h3>
+                <p>Experience modern aesthetics with a warm ambiance</p>
+            </div>
+        </div>
+    </div>
+    <h1>Food Canvas </h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="pic2.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Tuscan Chicken</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic30.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Panner Tandoor</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic8.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Chicken Parmigiana</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic9.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Schezwan Tofu</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic11.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Margherita Pizza</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic12.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Paneer Butter Masala</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic13.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Egg Masala</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic14.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>General Tso’s Chicken</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic15.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Pasta Alfredo</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic16.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Dim Sum</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic19.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Chicken Rogn Josh,Chole Bhature</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic3.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Ma Po Tofu</h3>
+            </div>
+        </div>
+    </div>
+    <h1>Event Echoes </h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="pic21.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Wine Tasting Experience</h3>
+                <p>Savor exquisite wines and explore rich flavors guided by experts</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic23.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Tandoor Experience</h3>
+                <p>Enjoy the smoky flavors of traditional tandoor-cooked delicacies</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic24.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Romantic Candle Light Dinner</h3>
+                <p>A dreamy dining setup with soft candlelight </p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic27.png" alt="Gallery Image 6">
+            <div class="overlay">
+                <h3>Live JAZZ Night</h3>
+                <p>Immerse yourself in soulful jazz tunes</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic28.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Gourment Tasting Menu</h3>
+                <p>Indulge in a curated menu of chef-crafted gourmet delights</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic7.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>International Cuisine Night</h3>
+                <p>Immerse in global flavors with themed decor and elegant ambiance</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic26.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>BBQ Feast</h3>
+                <p>A smoky, flavorful grill experience featuring succulent meats </p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic22.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Exclusive Events</h3>
+                <p>Celebrate special moments with personalized event experiences</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic18.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Family Dinning</h3>
+                <p>Cozy decor and warm vibes for unforgettable family moments</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic29.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Chef’s Special Week</h3>
+                <p>Discover a new culinary masterpiece every day, handpicked by our chef. </p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic31.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>International Cuisine Night</h3>
+                <p>Experience a diverse array of authentic dishes from around the world.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="pic32.png" alt="Gallery Image 5">
+            <div class="overlay">
+                <h3>Exclusive Seafood Night</h3>
+                <p>Feast on the finest seafood, fresh from the ocean to your plate</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
